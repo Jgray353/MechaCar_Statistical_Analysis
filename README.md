@@ -4,11 +4,11 @@
 
 The purpose of this analysis is use linear regression in R to determine which variables/coeffiecients have the biggest non random impact on fuel efficiency (MPG) for the MechaCar.
 
-* The variables/coefficients which provided a non-random amount of variance to the mpg values in the dataset are vehicle length and ground clearance. We see this reflected in the p-value scores for each variable as they’re both below the significance level of .05. Conversely, we see vehicle weight, spoiler angle, and AWD (all wheel drive) all have p-values above .05, which indicates they’ve provided random amounts of variance to the dataset. 
+* The variables/coefficients which provided a non-random amount of variance to the MPG values in the dataset are vehicle length and ground clearance. We see this reflected in the p-value scores for each variable as they’re both below the significance level of .05. Conversely, we see vehicle weight, spoiler angle, and AWD (all wheel drive) all have p-values above .05, which indicates they’ve provided random amounts of variance to the dataset. 
 
-* The slope of the linear model is not considered to be zero, as the p-value of 5.35x10-11 is lower than even an extreme level of significance. Thus the null hypothesis must be rejected. This means that the relationship between our variables and the miles per gallon is subject to more than random chance.
+* The slope of the linear model is not considered to be zero, as the p-value of 5.35x10-11 is lower than even an extreme level of significance. Thus the null hypothesis must be rejected. This means the relationship between our variables and the fuel efficiency is subject to more than random chance.
 
-* Relatively speaking, this linear regression model does predict mpg of MechaCar prototypes effectively. This linear model has an r-squared value of 0.7149, which means that approximately 71% of all mpg predictions will be determined by this model. 
+* Relatively speaking, this linear regression model does predict MPG of MechaCar prototypes effectively. This linear model has an r-squared value of 0.7149, which means that approximately 71% of all mpg predictions will be determined by this model. 
 
 
 <img width="550" alt="Deliverable_1_Challenge15" src="https://user-images.githubusercontent.com/90881705/150242138-38252e5b-185e-46af-88a4-f3a48a24f7cc.png">
@@ -57,5 +57,14 @@ However, Lot 3, not surprisingly is a different scenario. Here the sample mean i
 <img width="423" alt="Deliverable_3_TTest3" src="https://user-images.githubusercontent.com/90881705/150245920-ba5974d9-0e28-421c-bcba-318b3bca08b4.png">
 
 
+## Study Design: MechaCar vs Competition
 
+A statistical study can be done to see how MechaCar performs against the competition. We would want to focus on the most important aspects buyers consider when purchasing a vehicle. Some of those aspects - but not limited to -  would be price, cost of ownership, fuel efficiency, resale value, and safety ratings. These are consistently among the top factors for car buyers.
+
+Our study hypotheses are defined as follows:
+
+H0: There is NO statistical significant difference on defined metrics between MechaCar and the competition.
+Ha: There IS statistical significant difference on defined metrics between MecharCar and the competition.
+
+The significance value defined for the study is 0.05. In order to perform the analysis, we would need to collect the data for each aspect listed above. And we would be collecting competitor data for cars in the same class as MechaCar. All the competitor data is grouped together for our analysis. Then we would perform t-tests on each metrics for MechaCar against the same metric from the collective competitor data. If the p-value for each of the t-tests is less than 0.05, then we will reject our NULL hypothesis.
 
